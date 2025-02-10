@@ -44,7 +44,6 @@ A hybrid log classification system combining **Regex**, **Sentence Transformers*
 +-------------------+  +-------------------+
 | BERT Classification|  | LLM Classification |
 +-------------------+  +-------------------+
-```
 
 
 ## **Folder Structure**
