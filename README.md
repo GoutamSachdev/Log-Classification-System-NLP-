@@ -10,6 +10,7 @@ A hybrid log classification system combining **Regex**, **Sentence Transformers*
 - **Sentence Transformer + Logistic Regression**: Classifies complex patterns with sufficient training data.(SentenceTransformer)
 - **LLM (Large Language Models)**: Handles complex patterns when training data is limited. (deepseek-r1-distill-llama-70b)
 
+```flowchart
 +-------------------+
 |   Log Message     |
 +-------------------+
@@ -43,7 +44,19 @@ A hybrid log classification system combining **Regex**, **Sentence Transformers*
 +-------------------+  +-------------------+
 | BERT Classification|  | LLM Classification |
 +-------------------+  +-------------------+
+```
 
+| Step                     | Description                  |
+|--------------------------|------------------------------|
+| **Log Message**          | The input log message.       |
+| **Regex Classification** | Classify using regex rules.  |
+| **Valid Class**          | Log matches a known pattern. |
+| **Unknown**              | Log does not match any pattern. |
+| **Enough training?**     | Check if training data is sufficient. |
+| **Yes**                  | Proceed to BERT Classification. |
+| **No**                   | Proceed to LLM Classification. |
+| **BERT Classification**  | Classify using BERT model.   |
+| **LLM Classification**   | Classify using LLM model.    |
 
 
 ## **Folder Structure**
